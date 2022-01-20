@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from "@/components/Home";
 import Login from "@/components/Login";
+import Informacion from "@/components/Informacion";
+import Galeria from "@/components/Galeria";
+import Contacto from "@/components/Contacto";
 
 import {getAuth as auth
 } from "firebase/auth";
@@ -30,6 +33,8 @@ const routes = [{
   path: "/",
   redirect: "/login",
 },
+
+
 ]
 
 

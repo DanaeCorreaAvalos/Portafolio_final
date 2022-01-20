@@ -1,8 +1,9 @@
 <template>
    <v-app>
     <Navbar />
+   
 
-    <v-main class="my-5 pt-5">
+    <v-main >
       <router-view />
     </v-main>
   </v-app>
@@ -16,6 +17,7 @@ import Navbar from "@/components/Navbar";
 export default {
   name: "App",
   components: { Navbar },
+
 
 };
 </script>
