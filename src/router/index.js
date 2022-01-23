@@ -2,13 +2,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from "@/components/Home";
 import Login from "@/components/Login";
-import Informacion from "@/components/Informacion";
 import Galeria from "@/components/Galeria";
+import About from "@/components/About";
 import Contacto from "@/components/Contacto";
+import NotFound from "@/components/NotFound"
 
 import {getAuth as auth
 } from "firebase/auth";
-
 
 Vue.use(VueRouter)
 
@@ -26,14 +26,52 @@ const routes = [{
   }
 },
 {
-  path: "*",
-  redirect: "/login",
-},
-{
   path: "/",
   redirect: "/login",
 },
 
+{
+  path: "/home",
+  name: "Home",
+  component: Home,
+  meta: {
+    login: true,
+  }
+},
+
+
+{
+  path: "/galeria",
+  name: "Galeria",
+  component: Galeria,
+  meta: {
+    login: true,
+  }
+},
+
+{
+  path: "/about",
+  name: "About",
+  component: About,
+  meta: {
+    login: true,
+  }
+},
+
+{
+  path: "/contacto",
+  name: "Contacto",
+  component: Contacto,
+  meta: {
+    login: true,
+  }
+},
+
+{
+  path: "*",
+  redirect: "/NotFound",
+  component: NotFound,
+},
 
 ]
 
@@ -54,9 +92,6 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
-
-
-
 
 
 
