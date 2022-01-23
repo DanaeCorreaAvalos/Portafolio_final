@@ -1,46 +1,58 @@
 <template>
 
-
 <b-container>
-<h1>este es el home</h1>
-<div>
+<div class="mt-5" align="center">
+<b-row mt-5>
+<b-col cols="12" md="4">
 
   <b-card
-    title="Card Title"
-    img-src="https://picsum.photos/600/300/?image=25"
-    img-alt="Image"
-    img-top
-    tag="article"
-    style="max-width: 20rem;"
-    class="mb-2"
-  >
-    <b-card-text>
-      Some quick example text to build on the card title and make up the bulk of the card's content.
-    </b-card-text>
+    img-src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/972c0377397099.5c86b0e92c39f.jpg"
+      img-top
+      align="center"
 
-    <b-button href="/Contacto" variant="primary">Contacto</b-button>
+  > <p>Lorem, ipsum dolor.</p>
+      <b-button href="/about" variant="primary">About</b-button>
   </b-card>
+
+</b-col>
+
+
+
+<b-col cols="12" md="4">
+
+  <b-card
+    img-src="https://cdna.artstation.com/p/assets/images/images/018/729/136/large/danae-correa-final-7.jpg?1560475191"
+      img-top
+      align="center"
+
+  > <p>Lorem, ipsum dolor.</p>
+ <b-button href="/galeria" variant="primary">galeria</b-button>
+  </b-card>
+
+</b-col>
+
+
+<b-col cols="12" md="4">
+
+  <b-card
+    img-src="https://cdna.artstation.com/p/assets/images/images/018/729/138/large/danae-correa-final-8.jpg?1560475166"
+      img-top
+      align="center"
+  > <p>Lorem, ipsum dolor.</p>
+<b-button href="/contacto" variant="primary">contacto</b-button>
+  </b-card>
+
+</b-col>
+
+
+
+
+
+
+  </b-row>
 </div>
 
- <router-link to="/">Home</router-link> 
-
- <router-link to="/about">About</router-link> 
-
- <router-link to="galeria">Galeria</router-link> 
-
- <router-link to="/contacto">Contacto</router-link>
-   
-
-
-
 </b-container>
-
-
-
-
-
-
-
 </template>
 
 
@@ -67,5 +79,15 @@ export default {
 </script>
 
 <style>
+
+
+
+
+
+
+
+
+
+
 
 </style>

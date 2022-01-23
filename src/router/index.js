@@ -70,7 +70,7 @@ const routes = [{
 {
   path: "*",
   redirect: "/NotFound",
-  component: NotFound,
+  component: NotFound
 },
 
 ]

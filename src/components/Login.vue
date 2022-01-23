@@ -1,5 +1,5 @@
 <template>
-<div id="login" class="text-center">
+<div id="login" class="text-center" >
 
     <el-form label-width="100px" class="form-login" :model="formLabelAlign">
         <el-input placeholder="Correo electrónico" v-model="formLabelAlign.user"></el-input>

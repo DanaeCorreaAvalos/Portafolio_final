@@ -1,19 +1,29 @@
 <template>
+<div>
 
-  <b-navbar toggleable type="dark" variant="dark">
+<b-navbar toggleable="md" type="dark" variant="dark" class="mb-5">
+
+<b-container>
+
+  <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-navbar-brand href="#">Portafolio</b-navbar-brand>
+   <b-colapse>
 
-    <b-navbar-toggle target="navbar-toggle-collapse">
-      <template #default="{ expanded }">
-        <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
-        <b-icon v-else icon="chevron-bar-down"></b-icon>
-      </template>
-    </b-navbar-toggle>
-
-    <b-collapse id="navbar-toggle-collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
-
+  <b-navbar-nav>
+        <b-nav-item :to="{name: 'Home'}" exact >Home</b-nav-item> 
+        <b-nav-item :to="{name: 'About'}">About</b-nav-item>
+        <b-nav-item :to="{name: 'Galeria'}">Galeria</b-nav-item>
+        <b-nav-item :to="{name: 'Contacto'}">Contacto</b-nav-item>
       </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
+
+
+   </b-colapse>
+</b-container>
+</b-navbar>
+
+
+
+
+
+</div>
 </template>
