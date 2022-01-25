@@ -11,7 +11,7 @@
       align="center"
 
   > <p>Lorem, ipsum dolor.</p>
-      <b-button href="/about" variant="primary">About</b-button>
+      <b-button :to="{name: 'About'}"  variant="primary">About</b-button>
   </b-card>
 
 </b-col>
@@ -26,7 +26,7 @@
       align="center"
 
   > <p>Lorem, ipsum dolor.</p>
- <b-button href="/galeria" variant="primary">galeria</b-button>
+ <b-button :to="{name: 'Galeria'}"  variant="primary">galeria</b-button>
   </b-card>
 
 </b-col>
@@ -39,7 +39,7 @@
       img-top
       align="center"
   > <p>Lorem, ipsum dolor.</p>
-<b-button href="/contacto" variant="primary">contacto</b-button>
+<b-button :to="{name: 'Contacto'}" variant="primary">contacto</b-button>
   </b-card>
 
 </b-col>

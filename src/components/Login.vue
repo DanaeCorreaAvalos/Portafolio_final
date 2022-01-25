@@ -1,4 +1,8 @@
 <template>
+
+<b-container>
+ <h1 class= "text-center display-4 my-4">Iniciar sesión</h1>
+
 <div id="login" class="text-center" >
 
     <el-form label-width="100px" class="form-login" :model="formLabelAlign">
@@ -7,6 +11,9 @@
         <el-button type="primary" class="ingresar-login" @click="login">Ingresar</el-button>
     </el-form>
 </div>
+
+
+</b-container>
 </template>
 
 

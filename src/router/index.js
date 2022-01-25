@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from "@/components/Home";
-import Login from "@/components/Login";
 import Galeria from "@/components/Galeria";
 import About from "@/components/About";
 import Contacto from "@/components/Contacto";
@@ -12,59 +11,38 @@ import {getAuth as auth
 
 Vue.use(VueRouter)
 
-const routes = [{
-  path: "/login",
-  name: "login",
-  component: Login,
-},
+const routes = [
 {
   path: "/home",
   name: "Home",
   component: Home,
-  meta: {
-    login: true,
-  }
-},
-{
-  path: "/",
-  redirect: "/login",
+
 },
 
 {
   path: "/home",
   name: "Home",
   component: Home,
-  meta: {
-    login: true,
-  }
 },
-
 
 {
   path: "/galeria",
   name: "Galeria",
   component: Galeria,
-  meta: {
-    login: true,
-  }
+
 },
 
 {
   path: "/about",
   name: "About",
   component: About,
-  meta: {
-    login: true,
-  }
 },
 
 {
   path: "/contacto",
   name: "Contacto",
   component: Contacto,
-  meta: {
-    login: true,
-  }
+
 },
 
 {

@@ -6,7 +6,7 @@
 <b-container>
 
   <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-    <b-navbar-brand href="#">Portafolio</b-navbar-brand>
+  <b-navbar-brand :to="{name: 'Home'}">Portafolio</b-navbar-brand>
    <b-colapse>
 
   <b-navbar-nav>
