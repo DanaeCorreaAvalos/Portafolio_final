@@ -25,7 +25,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 initializeApp(firebaseConfig);
-
+// const storage = firebase.storage()
 
 
 Vue.config.productionTip = false

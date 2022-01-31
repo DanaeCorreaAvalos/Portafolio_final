@@ -1,9 +1,8 @@
 <template>
    <v-app>
     <Navbar />
-   
 
-    <v-main >
+    <v-main > 
       <router-view />
     </v-main>
   </v-app>
@@ -12,6 +11,7 @@
 
 <script>
 import Navbar from "@/components/Navbar";
+
 
 
 export default {
