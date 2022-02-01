@@ -19,7 +19,7 @@
 
 <script>
 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 export default {
     data() {
         return {
@@ -29,31 +29,31 @@ export default {
             },
         };
     },
-    methods: {
-        login() {
-            const auth = getAuth();
-            console.log(auth);
-            const {
-                formLabelAlign: {
-                    user: email,
-                    password
-                },
-            } = this;
-            debugger;
-            signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in
-                    const user = userCredential.user;
-                    // ...
-                    this.$router.push("/home");
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    alert(errorMessage);
-                });
-        },
-    }
+    // methods: {
+    //     login() {
+    //         const auth = getAuth();
+    //         console.log(auth);
+    //         const {
+    //             formLabelAlign: {
+    //                 user: email,
+    //                 password
+    //             },
+    //         } = this;
+    //         debugger;
+    //         signInWithEmailAndPassword(auth, email, password)
+    //             .then((userCredential) => {
+    //                 // Signed in
+    //                 const user = userCredential.user;
+    //                 // ...
+    //                 this.$router.push("/home");
+    //             })
+    //             .catch((error) => {
+    //                 const errorCode = error.code;
+    //                 const errorMessage = error.message;
+    //                 alert(errorMessage);
+    //             });
+    //     },
+    // }
 }
 </script>
 
