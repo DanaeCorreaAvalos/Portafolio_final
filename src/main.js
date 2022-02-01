@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import ElementUI from "element-ui"
 import "element-ui/lib/theme-chalk/index.css";
+import firebase from 'firebase'
+// import 'firebase/storage'
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -25,13 +27,16 @@ const firebaseConfig = {
 
 // Initialize Firebase
 initializeApp(firebaseConfig);
-// const storage = firebase.storage()
+const storage = firebase.storage()
 
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+export { storage }
+
+
 
 new Vue({
   router,
