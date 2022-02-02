@@ -6,22 +6,12 @@ import About from "@/components/About";
 import Contacto from "@/components/Contacto";
 import NotFound from "@/components/NotFound"
 
-// import {getAuth as auth
-// } from "firebase/auth";
 
 Vue.use(VueRouter)
 
 const routes = [
 {
   path: "/",
-  name: "Home",
-  component: Home,
-
-},
-
-
-{
-  path: "/home",
   name: "Home",
   component: Home,
 
