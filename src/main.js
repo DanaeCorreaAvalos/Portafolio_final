@@ -1,14 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import ElementUI from "element-ui"
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
-import firebase from "firebase/app"
-
+import firebase from "firebase/app";
+import 'firebase/firestore'
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -23,22 +23,25 @@ const firebaseConfig = {
   projectId: "portafolio1-8985d",
   storageBucket: "portafolio1-8985d.appspot.com",
   messagingSenderId: "660142571171",
-  appId: "1:660142571171:web:c8b4a04f799eb6bbca4916"
+  appId: "1:660142571171:web:c8b4a04f799eb6bbca4916",
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+export default firebase.firestore()
 
 
 
-Vue.config.productionTip = false
-Vue.use(ElementUI)
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
+
+
+Vue.config.productionTip = false;
+Vue.use(ElementUI);
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 
 new Vue({
   router,
   store,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");

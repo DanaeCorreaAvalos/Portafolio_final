@@ -1,4 +1,4 @@
-<template>
+<template  class="Home">
 
 
 
@@ -9,10 +9,11 @@
       <!-- <p class="Subtitulo text-center display-2">Artista Visual</p> -->
 
       <b-card no-body class="overflow-hidden">
-        <b-row no-gutters>
-          <b-col md="6" >
+        <b-row xs= "12" md=12>
+          <b-col >
             <b-img
               fluid
+              style="height: 300px;"
               src="https://cdna.artstation.com/p/assets/images/images/018/706/864/large/danae-correa-edit12.jpg?1560389831"
             ></b-img>
           </b-col>
@@ -36,6 +37,7 @@
           <b-col md="6" >
             <b-img
               fluid
+              style="height: 300px;"
               src="https://cdna.artstation.com/p/assets/images/images/018/729/138/large/danae-correa-final-8.jpg?1560475166"
             ></b-img>
           </b-col>
@@ -60,6 +62,7 @@
           <b-col md="6" >
             <b-img
               fluid
+              style="height: 300px;"
               src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/972c0377397099.5c86b0e92c39f.jpg"
             ></b-img>
           </b-col>
@@ -79,10 +82,6 @@
       <br />
 
       
-
-
-
-
 
 
 
@@ -146,6 +145,10 @@ font-family: 'Amatic SC'
 
 }
 
+.Home {
+
+background: #e2e3ba
+}
 
 
 

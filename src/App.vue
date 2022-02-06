@@ -12,16 +12,27 @@
 
 
 <script>
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import images from "@/components/Galeria";
 
 export default {
   name: "App",
-  components: { Navbar , Footer},
- 
-
+  components: { Navbar ,
+  Footer,
+  images,
+ data() {
+    return {
+      image: {
+        backgroundImages:
+          "url(https://rickandmortypod.com/wp-content/uploads/2018/11/cropped-RM_page-header_background1-3.png)",
+      },
+    };
+  },
+}
 };
+
 </script>
 
 
