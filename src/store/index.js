@@ -1,64 +1,60 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import Datos from "./Datos";
-import Firebase from 'firebase'
+import Firebase from "firebase";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    personajes: [],
+    patients: [],
   },
 
   mutations: {
-    VER_PG(state, newpersonajes) {
-      state.personajes = newpersonajes;
+    VER_PACIENTES(state, newpatients) {
+      state.patients = newpatients;
     },
-    CREAR_PG(state, personaje) {
-      state.personajes.push(personaje);
+    CREAR_PACIENTE(state, patient) {
+      state.patients.push(patient);
     },
 
-    ELIM_PG(state, personajeid) {
-      const eliminarPersonaje = state.personajes.filter(
-        (personaje) => personaje.id === personajeid
+    ELIM_PACIENTES(state, patientid) {
+      const eliminarPaciente = state.patients.filter(
+        (patient) => patient.id === patientid
       );
-      const indexOfPG = state.personajes.indexOf(eliminarPersonaje[0]);
-      state.personajes.splice(indexOfPG, 1);
+      const indexOfPatient = state.patients.indexOf(eliminarPaciente[0]);
+      state.patients.splice(indexOfPatient, 1);
     },
   },
   actions: {
     verTodos(context) {
       Firebase.firestore()
-        .collection("galeria")
+        .collection("pacients")
         .get()
         .then((collection) => {
-          const personajes = [];
+          const patients = [];
           collection.forEach((document) => {
-            personajes.push({ id: document.id, ...document.data() });
+            patients.push({ id: document.id, ...document.data() });
           });
-          context.commit("VER_PG", personajes);
+          context.commit("VER_PACIENTES", patients);
         });
     },
 
-    crearNuevoPG(context, personaje) {
-      Firebase.firestore().collection("galeria").add(personaje);
-      context.commit("CREAR_PG", personaje);
+    crearNuevoPacient(context, patient) {
+      Firebase.firestore().collection("pacients").add(patient);
+      context.commit("CREAR_PACIENTE", patient);
     },
 
-    adiosPacientet(context, personaje) {
-      Firebase.firestore().collection("galeria").doc(personaje.id).delete();
-      context.commit("ELIM_PG", personaje.id);
+    adiosPacientet(context, patient) {
+      Firebase.firestore().collection("pacients").doc(patient.id).delete();
+      context.commit("ELIM_PACIENTES", patient.id);
     },
 
-    editarPaciente(context, personaje) {
+    editarPaciente(context, patient) {
       Firebase.firestore()
-        .collection("galeria")
-        .doc(personaje.id)
-        .update(personaje);
+        .collection("pacients")
+        .doc(patient.id)
+        .update(patient);
     },
   },
-  modules: {
-  Datos
-
-  },
+  modules: {},
 });

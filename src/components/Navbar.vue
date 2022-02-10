@@ -14,6 +14,7 @@
         <b-nav-item :to="{name: 'Galeria'}">Galeria</b-nav-item>
         <b-nav-item :to="{name: 'About'}">About</b-nav-item>
         <b-nav-item :to="{name: 'Contacto'}">Contacto</b-nav-item>
+
       </b-navbar-nav>
 
 

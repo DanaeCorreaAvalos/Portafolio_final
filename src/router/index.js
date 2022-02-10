@@ -5,7 +5,8 @@ import Galeria from "@/components/Galeria";
 import About from "@/components/About";
 import Contacto from "@/components/Contacto";
 import NotFound from "@/components/NotFound"
-
+import Editobra from "@/components/Editobra"
+import Addobra from "@/components/Addobra"
 
 Vue.use(VueRouter)
 
@@ -42,6 +43,22 @@ const routes = [
   redirect: "/NotFound",
   component: NotFound
 },
+
+
+{
+  path: "/Editobra",
+  name: "Edit",
+  component: Editobra,
+
+},
+
+{
+  path: "/Addobra",
+  name: "Add",
+  component: Addobra,
+
+},
+
 
 ]
 

@@ -8,7 +8,8 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import firebase from "firebase/app";
-import 'firebase/firestore'
+import { library } from '@fortawesome/fontawesome-svg-core'
+
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -23,13 +24,14 @@ const firebaseConfig = {
   projectId: "portafolio1-8985d",
   storageBucket: "portafolio1-8985d.appspot.com",
   messagingSenderId: "660142571171",
-  appId: "1:660142571171:web:c8b4a04f799eb6bbca4916",
+  appId: "1:660142571171:web:c8b4a04f799eb6bbca4916"
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-export default firebase.firestore()
+
+
 
 
 

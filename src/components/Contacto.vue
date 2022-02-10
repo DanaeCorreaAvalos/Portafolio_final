@@ -7,7 +7,7 @@
 <form class="form"  action="https://formspree.io/f/xyyoeldz"
   method="POST" >
 <div class= "form__container">
-<h2 class= "form__title">Contactame</h2>
+<!-- <h2 class= "form__title">Contactame</h2> -->
 <input type="text" class="form__input" placeholder="Nombre:" name="name">
 <input type="email" class="form__input" placeholder="Email:"  name="_replyto">
 <textarea class="form__input__form__input--message" placeholder="Mensaje:" name="message" ></textarea>
@@ -16,9 +16,7 @@
 </div>
 </form>
 
-
-
-
+<hr>
 
 </b-container>
 
@@ -34,7 +32,7 @@
 
 <style >
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap'); */
 @media(max-width: 450px){
  
 }
@@ -52,7 +50,7 @@ body{
  min-height:100vh;
  width:100% ;
 
- font-family: 'Montserrat', sans-serif;
+ font-family: 'Roboto', sans-serif;
 
 }
 
@@ -81,8 +79,8 @@ grid-auto-columns: 100%;
   font-family: inherit;
   font-size: 1rem;
   padding: .8rem 1em ;
-  outline: none;
-  border: none;
+  /* outline: none;
+  border: none; */
   border: 1px solid #bbb0bb;
   border-radius: 0.2em;
 
@@ -94,9 +92,6 @@ grid-auto-columns: 100%;
   padding: 1.8em 1em;
   margin-bottom: .5em;
 }
-
-
-
 
 .form__cta{
 
@@ -118,6 +113,18 @@ grid-auto-columns: 100%;
   font-size:1.9rem;
   margin-bottom: .4em;
 }
+
+
+/* redes sociales */
+
+
+
+
+
+
+
+
+
 
 
 </style>
